@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面Demo</title>
+	<link rel="stylesheet" href="../../css/dropkick.css"></head>
+	<style>
+		body {
+		    background: none repeat scroll 0 0 #BFBFBF;
+		    height: 1024px;
+		    margin: 0;
+		    padding: 0;
+		}
+		.nav_back {
+		    background: none repeat scroll 0 0 #D7D7D7;
+		    height: 1024px;
+		    position: relative;
+		}
+		.admin_div {
+		    height: auto;
+		    margin: 0 auto;
+		    padding-top: 80px;
+		    width: 421px;
+		}
+		.admin_divtop {
+		    background: url("img/coetop2_03.png") no-repeat scroll 0 0 transparent;
+		    height: 49px;
+		    width: 100%;
+		}
+		.admin_divcentent {
+		    height: 337px;
+		    width: 100%;
+		}
+
+		.admin_div_cleft {
+		    background: url("img/coeleft2_05.png") no-repeat scroll 0 0 transparent;
+		    float: left;
+		    height: 100%;
+		    width: 6px;
+		}
+		.admin_div_ccent {
+		    background: url("img/imgback.jpg") repeat-x scroll 0 0 transparent;
+		    float: left;
+		    height: 100%;
+		    position: relative;
+		    width: 409px;
+		}
+		.admin_divtitle {
+		    color: #767676;
+		    font-family: '微软雅黑,Verdana';
+		    font-size: 14px;
+		    left: 32px;
+		    position: absolute;
+		    top: 43px;
+		}
+
+		.iph_yhm {
+		    background: url("img/login_bg.jpg") no-repeat scroll 0 0 transparent;
+		    color: #767676;
+		    height: 40px;
+		    left: 32px;
+		    position: absolute;
+		    top: 90px;
+		    width: 344px;
+		}
+		.login {
+		    float: left;
+		    margin: 12px 5px 20px 20px;
+		}
+		.iph_yhm input, .iph_pws input {
+		    background: none repeat scroll 0 0 transparent;
+		    color: #767676;
+		    float: left;
+		    height: 25px;
+		    line-height: 25px;
+		    margin-top: 7px;
+		    width: 240px;
+		}
+		input, button, select, textarea {
+		    outline: medium none;
+		}
+		input, select {
+		    border: 0 none;
+		}
+
+		.iph_yhm span, .iph_pws span {
+		    display: block;
+		    float: right;
+		    height: 40px;
+		    width: 6px;
+		}
+
+	.iph_pws {
+	    background: url("img/login_bg.jpg") no-repeat scroll 0 0 transparent;
+	    color: #767676;
+	    height: 40px;
+	    left: 32px;
+	    position: absolute;
+	    top: 168px;
+	    width: 344px;
+	}
+	.admin_divdl {
+	    background: url("img/dengl.gif") no-repeat scroll 0 0 transparent;
+	    color: #FFFFFF;
+	    font-weight: bold;
+	    height: 49px;
+	    padding-top: 10px;
+	    position: absolute;
+	    right: 144px;
+	    text-align: center;
+	    top: 242px;
+	    width: 107px;
+	}
+	.admin_divselect {
+	    color: #575757;
+	    height: 39px;
+	    line-height: 39px;
+	    position: absolute;
+	    right: 36px;
+	    text-align: center;
+	    top: 242px;
+	    width: 105px;
+	}
+	.admin_div_cright {
+	    background: url("img/coeright2_05.png") no-repeat scroll 0 0 transparent;
+	    float: right;
+	    height: 100%;
+	    overflow: hidden;
+	    width: 6px;
+	}
+	.admin_bottom {
+	    background: url("img/coebottom2_07.png") no-repeat scroll 0 0 transparent;
+	    color: #989898;
+	    font-family: '微软雅黑,Verdana';
+	    font-size: 12px;
+	    height: 49px;
+	    line-height: 45px;
+	    text-align: center;
+	    width: 421px;
+	}
+	a {
+	    color: #989898;
+	    text-decoration: none;
+	}
+
+	#awsCopyRight {
+	    display: inline;
+	}
+	</style>
+</head>
+<body>
+<form name="AWSINAdministrator" id="AWSINAdministrator" method="post">
+	<div class="nav_back">
+		<div class="admin_div">
+			<div class="admin_divtop"></div>
+			<div class="admin_divcentent">
+				<div class="admin_div_cleft"></div>
+				<div class="admin_div_ccent">
+					<div class="admin_divtitle">
+						<span id="sign">登录使用</span>
+						AWS CoE
+					</div>
+					<div class="iph_yhm">
+						<label for="userid" id="uidDiv" class="login">用户名</label>
+						<input type="text" id="userid" name="userid" value="">
+						<span></span>
+					</div>
+					<div class="iph_pws">
+						<label for="pwd" id="pwdDiv" class="login">密&nbsp;&nbsp;码</label>
+						<input id="pwd" name="pwd" type="password" value="">
+						<span></span>
+					</div>
+					<a class="admin_divdl" id='loginCommand' href="#" onclick="return inCOE();" >登&nbsp;&nbsp;录</a>
+
+					<div class="admin_divselect">
+						<select class=" default"  name="PORTAL_LANG" id="PORTAL_LANG" >
+							<option value="cn" >中文</option>
+							<option value="en">English</option>
+							<option value="big5">繁體</option>
+						</select>
+					</div>
+
+				</div>
+				<div class="admin_div_cright"></div>
+			</div>
+			<div class="admin_bottom" >
+				CopyRight 2013
+				<a   href="#" target=_blank >
+					<div id="awsCopyRight" >Actionsoft Co.Ltd 炎黄盈动版权所有</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<input type=hidden name=cmd value="Login">
+	<input type=hidden name=_CACHE_LOGIN_TIME_ value="1369286964783"></form>
+	<script type="text/javascript" src="../test/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="../../js/rmm-select.js"></script>
+	<script type="text/javascript" src="js/initLogin.js"></script>
+	<script>
+		jQuery(function(){
+		    loadLang();
+		    jQuery('.default').select({
+		      change: function (value, label) {
+		        setCoeLangCookie(value);
+		        loadLang();
+		      }
+		    });
+  		})
+	</script>
+</body>
+</html>

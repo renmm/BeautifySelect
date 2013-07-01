@@ -1,0 +1,138 @@
+
+.dk_container {
+    background: -moz-linear-gradient(center top , #FFFFFF, #F5F5F5) repeat scroll 0 0 #F5F5F5;
+    border-radius: 5px 5px 5px 5px;
+    font-family: 'Helvetica',Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.dk_container:focus {
+    outline: 0 none;
+}
+.dk_container a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.dk_toggle {
+    background-image: url("../img/dk_arrows.png");
+    background-position: 90% center;
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333;
+    padding: 7px 19px 7px 10px;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    transition: border-color 0.5s ease 0s;
+}
+.dk_toggle:hover {
+    border-color: #8C8C8C;
+}
+.dk_focus .dk_toggle {
+    border-color: #40B5E2;
+}
+.dk_focus .dk_toggle {
+    box-shadow: 0 0 5px #40B5E2;
+}
+.dk_open {
+    box-shadow: 0 0 5px #40B5E2;
+    z-index: 10;
+}
+.dk_open .dk_toggle {
+    background-color: #ECECEC;
+    border-color: #8C8C8C;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 -2px 5px #CCCCCC inset;
+    color: #CCCCCC;
+}
+.dk_options {
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.dk_options ul {
+    list-style: none outside none;
+}
+.dk_options a {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #999999;
+    font-weight: bold;
+    padding: 8px 10px;
+}
+.dk_options li:last-child a {
+    border-bottom: medium none;
+}
+.dk_options a:hover, .dk_option_current a {
+    background-color: #0084C7;
+    border-bottom-color: #004C72;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+.dk_options_inner {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #8C8C8E #8C8C8E #999999;
+    border-image: none;
+    border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    color: #333333;
+    margin: 0;
+    max-height: 250px;
+    padding: 0;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.dk_options_inner, .dk_touch .dk_options {
+    max-height: 250px;
+}
+.dk_container {
+    display: none;
+    float: left;
+    position: relative;
+}
+.dk_container a {
+    outline: 0 none;
+}
+.dk_toggle {
+    display: inline-block;
+    position: relative;
+}
+.dk_open {
+    position: relative;
+}
+.dk_open .dk_options {
+    display: block;
+}
+.dk_open .dk_label {
+    color: inherit;
+}
+.dk_options {
+    display: none;
+    margin-top: -1px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+.dk_options a, .dk_options a:link, .dk_options a:visited {
+    display: block;
+}
+.dk_options_inner {
+    overflow: auto;
+    position: relative;
+}
+.dk_touch .dk_options {
+    overflow: hidden;
+}
+.dk_touch .dk_options_inner {
+    max-height: none;
+    overflow: visible;
+}
+.dk_fouc select {
+    position: relative;
+    top: -99999em;
+    visibility: hidden;
+}
